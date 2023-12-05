@@ -11,7 +11,9 @@ const Add = () => {
 
   const addHandler = (e) => {
     e.preventDefault();
-    dispatch(addTodo({ id: uuidv4(), task: newTodo, isEdited: false }));
+    dispatch(
+      addTodo({ id: uuidv4(), task: newTodo, isEdited: false, isDone: false })
+    );
     setNewTodo("");
   };
 
